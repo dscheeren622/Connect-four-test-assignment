@@ -5,7 +5,7 @@
 class RedDisc : public Disc
 {
     public:
-        RedDisc(Position &position);
+        explicit RedDisc(const Position &position);
         ~RedDisc() = default;
 
     private:

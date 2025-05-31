@@ -1,6 +1,6 @@
 #include "RedDisc.h"
 
-RedDisc::RedDisc(Position &position)
+RedDisc::RedDisc(const Position &position)
 : Disc(position)
 {}
 

@@ -1,4 +1,3 @@
-#pragma once
 #include <random>
 #include "Game.h"
 
@@ -66,7 +65,7 @@ void Game::yellowPlayerTurn(Field &field)
     field.showField();
 }
 
-void Game::takeTurn(int columnNumber, Color color, Field& field)
+void Game::takeTurn(int columnNumber, const Color &color, Field &field)
 {   
     if (color == Color::Red)
     {

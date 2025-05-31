@@ -2,6 +2,7 @@
 
 #include "Position.h"
 #include "ColorEnum.h"
+#include "Field.cpp"
 
 class DiscFactory
 {

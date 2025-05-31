@@ -1,6 +1,6 @@
 #include "YellowDisc.h"
 
-YellowDisc::YellowDisc(Position &position)
+YellowDisc::YellowDisc(const Position &position)
 : Disc(position)
 {}
 

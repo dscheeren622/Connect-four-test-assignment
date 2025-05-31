@@ -2,32 +2,32 @@
 #include <iostream>
 #include "Field.h"
 
-std::vector<Disc> Field::getDiscs()
+std::vector<Disc> &Field::getDiscs()
 {
     return m_discs;
 }
 
-std::vector<Disc> Field::getRedDiscs()
+std::vector<Disc> &Field::getRedDiscs()
 {
     return m_redDiscs;
 }
 
-std::vector<Disc> Field::getYellowDiscs()
+std::vector<Disc> &Field::getYellowDiscs()
 {
     return m_yellowDiscs;
 }
 
-void Field::addDiscToList(Disc &disc)
+void Field::addDiscToList(const Disc &disc)
 {
     m_discs.push_back(disc);
 }
 
-void Field::addRedDiscToList(Disc &disc)
+void Field::addRedDiscToList(const Disc &disc)
 {
     m_redDiscs.push_back(disc);
 }
 
-void Field::addYellowDiscToList(Disc &disc)
+void Field::addYellowDiscToList(const Disc &disc)
 {
     m_yellowDiscs.push_back(disc);
 }
@@ -53,7 +53,7 @@ void Field::showField()
     }
 }
 
-bool Field::checkRedDiscPresent(Position &position, bool discPresent)
+bool Field::checkRedDiscPresent(const Position &position, bool discPresent)
 {
     for (int k = 0; k < m_redDiscs.size(); ++k)
     {
@@ -67,7 +67,7 @@ bool Field::checkRedDiscPresent(Position &position, bool discPresent)
     return discPresent;
 }
 
-bool Field::checkYellowDiscPresent(Position &position, bool discPresent)
+bool Field::checkYellowDiscPresent(const Position &position, bool discPresent)
 {
     for (int k = 0; k < m_yellowDiscs.size(); ++k)
     {
@@ -162,7 +162,7 @@ Direction Field::checkNeighborDirection(Disc &disc, Disc &otherDisc)
     return Direction::NoDirection; // if the other disc is not a neighbor of current disc
 }
 
-void Field::checkCurrentDirection(Position position, Direction direction, std::vector<Disc> &discs)
+void Field::checkCurrentDirection(const Position &position, const Direction &direction, std::vector<Disc> &discs)
 {
     Position displacement;
     switch (direction){
@@ -203,7 +203,7 @@ void Field::checkCurrentDirection(Position position, Direction direction, std::v
     }
 }
 
-void Field::checkFourRow(Position position, Position displacement, std::vector<Disc> &discs)
+void Field::checkFourRow(const Position &position, const Position &displacement, std::vector<Disc> &discs)
 {
     int counter = 1;
     for (int i = 0; i < discs.size(); ++i)

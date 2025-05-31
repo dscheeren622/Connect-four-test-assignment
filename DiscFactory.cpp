@@ -3,7 +3,6 @@
 
 #include "RedDisc.cpp"
 #include "YellowDisc.cpp"
-#include "Field.cpp"
 
 void DiscFactory::makeRedDisc(int columnNumber, Field &field)
 {

@@ -5,7 +5,7 @@
 class YellowDisc : public Disc
 {
     public:
-        YellowDisc(Position &position);
+        explicit YellowDisc(const Position &position);
         ~YellowDisc() = default;
 
     private:
